@@ -1,0 +1,23 @@
+timestamp 1731350996
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_12_4#" 67 0 12 4 ndiff 160 56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 107 5076 5 4 ndc 100 50 0 0 0 0 0 0 0 0 0 0 124 88 0 0 0 0
+node "out" 256 2538 12 42 pdiff 100 50 160 56 0 0 0 0 0 0 0 0 131 92 0 0 0 0
+node "vdd" 620 5123 5 42 pdiff 0 0 200 100 0 0 0 0 0 0 0 0 183 120 0 0 0 0
+node "in2" 788 9747 16 25 pc 0 0 0 0 148 144 0 0 0 0 0 0 67 50 0 0 0 0
+node "in1" 787 8619 6 31 pc 0 0 0 0 148 144 0 0 0 0 0 0 37 30 0 0 0 0
+node "w_n1_36#" 2662 0 -1 36 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1088 132
+cap "w_n1_36#" "in2" 780
+cap "out" "in2" 180
+cap "w_n1_36#" "out" 1833
+cap "w_n1_36#" "vdd" 1974
+cap "in1" "in2" 180
+cap "w_n1_36#" "in1" 780
+device mosfet nfet 20 4 21 5 2 20 "Gnd!" "in2" 4 0 "a_12_4#" 20 80,28 "out" 20 100,50
+device mosfet nfet 10 4 11 5 2 20 "Gnd!" "in1" 4 0 "gnd" 20 100,50 "a_12_4#" 20 80,28
+device mosfet pfet 20 42 21 43 2 20 "w_n1_36#" "in2" 4 0 "out" 20 80,28 "vdd" 20 100,50
+device mosfet pfet 10 42 11 43 2 20 "w_n1_36#" "in1" 4 0 "vdd" 20 100,50 "out" 20 80,28
